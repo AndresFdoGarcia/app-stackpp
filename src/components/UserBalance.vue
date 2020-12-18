@@ -24,7 +24,7 @@ export default {
         else{
             this.username = self;
             console.log(self)
-            axios.get("https://stackppapp.herokuapp.com/user/balance/" + this.username)
+            axios.get("https://apistackpp.herokuapp.com/user/balance/" + this.username)
                 .then((result) => {
                     this.balance = result.data.balance
                 })

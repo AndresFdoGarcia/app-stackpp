@@ -75,7 +75,7 @@ name: 'PostFormAxios',
     methods:{
         submitForm(){
             console.log(this.form)
-            axios.post('https://stackppapp.herokuapp.com/createuser/', this.form)
+            axios.post('https://apistackpp.herokuapp.com/createuser/', this.form)
                  .then((res) => {
                     console.log(res.data)
                     alert("Usuario creado correctamente")

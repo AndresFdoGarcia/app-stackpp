@@ -37,7 +37,7 @@ data(){
         processAuthUser: function(){
             
             console.log(this.form)
-            axios.post("https://stackppapp.herokuapp.com/user/auth/", {"username":this.form.username,"password":this.form.password})
+            axios.post("https://apistackpp.herokuapp.com/user/auth/", {"username":this.form.username,"password":this.form.password})
                 .then((result) => {                   
                     alert("Autenticación Exitosa")
                     this.$emit('log-in',this.form.username)
