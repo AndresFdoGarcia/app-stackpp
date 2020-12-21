@@ -1,6 +1,6 @@
 <template>
 <div id="UserBalance">
-<h2>{{username}}</h2>
+<h2>{{nombre}} {{apellido}}</h2>
 <h2>Tu saldo es: <span> {{balance}} COP </span> </h2>
 </div>
 </template>
@@ -11,6 +11,8 @@ export default {
     data: function (){
         return {
             username: "",
+            nombre : "",
+            apellido: "",
             balance: 0
         }
     },
@@ -27,6 +29,8 @@ export default {
             axios.get("https://apistackpp.herokuapp.com/user/balance/" + this.username)
                 .then((result) => {
                     this.balance = result.data.balance
+		    this.nombre = result.data.nombre
+                    this.apellido = result.data.apellido
                 })
                 .catch((error) => {
                 alert("ERROR Servidor");

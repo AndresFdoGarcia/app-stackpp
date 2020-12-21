@@ -7,8 +7,7 @@
   		<button v-on:click="init" >Inicio</button>
   		<button v-show="is_auth" v-on:click="getBalance" >Saldo</button>
 		<button v-show="(is_auth==false)" v-on:click="updateAuth">Iniciar Sesion</button>
-  		<button v-show="(is_auth==false)" v-on:click="UserCreate" >Crear</button>
-		<button v-on:click="CloseSesion" v-if="is_auth">Cerrar Sesion</button>
+  		<button v-on:click="CloseSesion" v-if="is_auth">Cerrar Sesion</button>
 				
 	</nav>
 </div>

@@ -12,10 +12,15 @@
     <input type="password" class="form-control" id="password"  v-model="form.password">
 </div>
 <div class="form-group">
+    
     <button class="btn btn-primary">Validar</button>
-</div>
+    </div>
 </form>
+<div clas="forma">
+<button class="btn btn-primary" v-on:click="UserCreate">crear</button>
 </div>
+</div>
+
 </div>
 
 
@@ -51,7 +56,12 @@ data(){
                 }).finally(() => {
                      //Perform action in always
                 });
-        }
+        },
+	UserCreate: function(){
+			if(this.$route.name != "UserCreate"){
+				this.$router.push({ name:"UserCreate"})
+			}		
+		},
     }
 }
 </script>

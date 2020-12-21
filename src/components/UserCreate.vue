@@ -79,6 +79,7 @@ name: 'PostFormAxios',
                  .then((res) => {
                     console.log(res.data)
                     alert("Usuario creado correctamente")
+		    this.$router.push({name: "UserAuth"})
                  })
                  .catch((error) => {
                      if (error.response.status == "404")
